@@ -1,12 +1,320 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KLA TRADERS | CATALOGUE</title>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🎁</text></svg>">
+  <!-- Google Fonts Premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Hello, world!</h1>
-    <p>KLA TRADERS</p>
+
+  <!-- Header Flotante -->
+  <header>
+    <div class="container nav-container">
+      <div class="brand">
+        <div class="logo-placeholder">
+          <img src="logo.jpg" alt="logo">
+        </div>
+        <h1 class="logo-text">KLA Traders</h1>
+      </div>
+
+      <div class="nav-actions">
+        <!--<button id="adminBtn" class="btn btn-icon" title="Acceso Admin">
+          <i class="fa-solid fa-user-lock"></i>
+        </button>-->
+        <div class="cart-btn" onclick="openCart()">
+          <i class="fa-solid fa-bag-shopping" style="color: var(--primary-dark); font-size: 1.2rem;"></i>
+          <span id="cart-count">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>About</h2>
+        <p>Encuentra creaciones únicas en crochet, hechas a mano y con el corazón.</p>
+        <a href="#catalogo" class="btn btn-primary">Ver Catálogo <i class="fa-solid fa-arrow-down"></i></a>
+      </div>
+    </section>
+
+    <!-- Sección de Ofertas (Dinámica) -->
+    <div id="offers-container" class="hidden">
+      <h3 class="section-title">Location</h3>
+      <div class="container">
+        <div id="offers-grid" class="grid">
+          <!-- JS inyectará ofertas aquí -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Catálogo Principal -->
+    <section id="catalogo" class="container">
+      <h3 class="section-title">List Of Items</h3>
+
+      <!-- Controles de Filtro -->
+      <div class="controls">
+        <div class="search-box">
+          <input type="text" id="search" class="search-input" placeholder="search...">
+          <div id="search-suggestions" class="search-suggestions"></div>
+        </div>
+        <div id="category-filters" class="category-list">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="bolt">Bolt</button>
+          <button class="filter-btn" data-category="nut">Nut</button>
+          <button class="filter-btn" data-category="washer">Washer</button>
+          <button class="filter-btn" data-category="hinges">Hinges</button>
+          <button class="filter-btn" data-category="channel">Channel</button>
+          <button class="filter-btn" data-category="screw">Screw</button>
+          <button class="filter-btn" data-category="rod">Rod</button>
+          <button class="filter-btn" data-category="fitting">Fitting</button>
+          <button class="filter-btn" data-category="other">Other</button>
+        </div>
+      </div>
+
+      <div id="product-grid" class="grid">
+        <!-- JS inyectará productos aquí -->
+      </div>
+
+      <!-- Controles de Paginación -->
+      <div id="pagination"></div>
+    </section>
+  </main>
+
+  <!-- Sección de Información (Info Bar) -->
+  <section class="info-bar">
+    <div class="container info-grid">
+      <div class="info-item">
+        <i class="fa-solid fa-shapes"></i>
+        <div>
+          <h4>Amigurumis</h4>
+          <p>Diseños únicos</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <h4>Caracas, Venezuela</h4>
+          <p>Hecho en casa</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-truck-fast"></i>
+        <div>
+          <h4>Envíos Nacionales</h4>
+          <p>A todo el país</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-store"></i>
+        <div>
+          <h4>Tienda Online</h4>
+          <p>24/7 Disponible</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Sugerencias (Nuevo) -->
+  <section class="container suggestion-section">
+    <h3 class="section-title" style="margin-bottom: 0.5rem;"><i class="fa-solid fa-lightbulb"></i> ¡Danos tus ideas!
+    </h3>
+    <p style="text-align: center; margin-bottom: 2rem;">¿Tienes una idea para un amigurumi? Escríbela aquí y envíamela.
+    </p>
+    <div class="suggestion-box">
+      <input type="text" id="suggestionInput" placeholder="Ej: Quiero un spiderman...">
+      <button onclick="sendSuggestion()" class="btn btn-primary">
+        Enviar <i class="fa-brands fa-whatsapp"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section container">
+    <h3 class="section-title">Preguntas Frecuentes</h3>
+    <div class="faq-container">
+      <details class="faq-item">
+        <summary>¿Cómo realizar un pedido?</summary>
+        <div class="faq-content">
+          <p>Para realizar un pedido envíanos el producto en el que estás interesado o una imagen de referencia,
+            trabajamos solo bajo pedido con anticipación abonando el 50% del monto para comenzar con tú pedido</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto tiempo demoran en hacer un pedido?</summary>
+        <div class="faq-content">
+          <p>Dependiendo de la complejidad, generalmente tomamos de 3 a 5 días para confeccionar tu pedido
+            dependiendo de cuantos estén en cola.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hacen diseños personalizados?</summary>
+        <div class="faq-content">
+          <p>Si realizamos personalizados, ya sea de un ser querido, mascotas, ramos o de tú personaje favorito.
+            Escríbenos al WhatsApp con una foto o idea y te damos presupuesto.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Métodos de pago</summary>
+        <div class="faq-content">
+          <p>Aceptamos Pago Móvil, zelle o efectivo (solo en Caracas).
+            Debes cancelar el 50% de abono para comenzar</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Entregas y envíos</summary>
+        <div class="faq-content">
+          <p>Realizamos entregas personales en la California norte, Delivery en Caracas con costo adicional
+            y envíos nacionales por MRW o ZOOM cobro a destino</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué materiales utilizan?</summary>
+        <div class="faq-content">
+          <p>Trabajamos con hilo 100% acrílico hipoalergénico o
+            hilo chenille para los peluches más grandes y esponjosos!</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Zafiro Crochet</p>
+  </footer>
+
+  <!-- MODAL DETALLE PRODUCTO -->
+  <div id="productModal" class="modal">
+    <div class="modal-content product-detail-content">
+      <button onclick="closeProductModal()" class="close-modal-abs">&times;</button>
+      <div class="detail-grid">
+        <div class="detail-image-container">
+          <!-- Galería de Imágenes -->
+          <div class="image-gallery">
+            <button class="gallery-nav prev" onclick="changeProductImage(-1)">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <img id="detailImage" src="" alt="Detalle">
+            <button class="gallery-nav next" onclick="changeProductImage(1)">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+          <!-- Indicadores de imagen -->
+          <div id="imageIndicators" class="image-indicators"></div>
+        </div>
+        <div class="detail-info">
+          <span id="detailCategory" class="card-category">Categoría</span>
+          <h2 id="detailName">Nombre del Producto</h2>
+          <p id="detailDesc" class="detail-desc">Descripción detallada del producto...</p>
+
+          <div class="detail-price-row">
+            <span id="detailPrice" class="price big-price">$0.00</span>
+          </div>
+
+          <div class="quantity-selector">
+            <button onclick="changeQty(-1)">-</button>
+            <input type="number" id="qtyInput" value="1" min="1" readonly>
+            <button onclick="changeQty(1)">+</button>
+          </div>
+
+          <button onclick="addToCartFromModal()" class="btn btn-primary full-width">
+            Agregar al Carrito <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CARRITO -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Tu Carrito 🛒</h2>
+        <button onclick="closeCart()" class="close-modal">&times;</button>
+      </div>
+
+      <div id="cartItems" class="cart-items-container">
+        <!-- Items del carrito -->
+      </div>
+
+      <div id="cartExtras" class="cart-extras-container">
+        <!-- Extras (bolsas/cajas) se inyectarán aquí -->
+      </div>
+
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+
+      <button onclick="checkoutWhatsApp()" class="btn btn-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> Enviar Pedido
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL LOGIN -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content login-modal">
+      <h2>Administración</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label>Usuario</label>
+          <input type="text" id="usernameInput" placeholder="Usuario">
+        </div>
+        <div class="form-group">
+          <label>Contraseña</label>
+          <input type="password" id="passwordInput" placeholder="Contraseña">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary full-width">Entrar</button>
+          <button type="button" onclick="closeLogin()" class="btn btn-outline full-width">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL GENERADOR DE PRODUCTOS (ADMIN PANEL) -->
+  <div id="adminPanelModal" class="modal">
+    <div class="modal-content admin-content">
+      <div class="modal-header">
+        <h2><i class="fa-solid fa-list-check"></i> Lista de Pendientes</h2>
+        <button onclick="closeAdminPanel()" class="close-modal">&times;</button>
+      </div>
+      <p class="instruction">Anota aquí los amigurumis o pedidos que tienes por hacer.</p>
+
+      <div class="todo-input-group">
+        <input type="text" id="todoInput" placeholder="Ej: Snoopy para el viernes...">
+        <button onclick="addTodo()" class="btn btn-primary"><i class="fa-solid fa-plus"></i></button>
+      </div>
+
+      <div id="todoList" class="todo-list">
+        <!-- Tareas se inyectarán aquí -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WhatsApp FAB -->
+  <a id="whatsappFAB" class="fab-whatsapp" target="_blank" title="Escríbenos por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="products.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
