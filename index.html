@@ -24,19 +24,19 @@
     <div class="container nav-container">
       <div class="brand">
         <div class="logo-placeholder">
-          <img src="logo.jpg" alt="logo">
+          <img src="logo1.jpeg" alt="logo">
         </div>
         <h1 class="logo-text">KLA Traders</h1>
       </div>
 
       <div class="nav-actions">
-        <!--<button id="adminBtn" class="btn btn-icon" title="Acceso Admin">
+        <button id="adminBtn" class="btn btn-icon" title="Acceso Admin">
           <i class="fa-solid fa-user-lock"></i>
-        </button>-->
-        <div class="cart-btn" onclick="openCart()">
+        </button>
+        <!-- <div class="cart-btn" onclick="openCart()">
           <i class="fa-solid fa-bag-shopping" style="color: var(--primary-dark); font-size: 1.2rem;"></i>
           <span id="cart-count">0</span>
-        </div>
+        </div> -->
       </div>
     </div>
   </header>
@@ -45,9 +45,9 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h2>About</h2>
+        <h2>About Us</h2>
         <p>Encuentra creaciones únicas en crochet, hechas a mano y con el corazón.</p>
-        <a href="#catalogo" class="btn btn-primary">Ver Catálogo <i class="fa-solid fa-arrow-down"></i></a>
+        <a href="#catalogo" class="btn btn-primary">View Cataloge <i class="fa-solid fa-arrow-down"></i></a>
       </div>
     </section>
 
@@ -55,11 +55,15 @@
     <div id="offers-container" class="hidden">
       <h3 class="section-title">Location</h3>
       <div class="container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.2833667291225!2d77.22217997528287!3d28.651232883231646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd6f00000001%3A0xb9763e2395b51556!2sM%20C%20Traders!5e0!3m2!1sen!2sin!4v1779632186058!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="Iframe"></iframe>
         <div id="offers-grid" class="grid">
           <!-- JS inyectará ofertas aquí -->
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.2833667291225!2d77.22217997528287!3d28.651232883231646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd6f00000001%3A0xb9763e2395b51556!2sM%20C%20Traders!5e0!3m2!1sen!2sin!4v1779632186058!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
+
+
 
     <!-- Catálogo Principal -->
     <section id="catalogo" class="container">
@@ -76,10 +80,12 @@
           <button class="filter-btn" data-category="bolt">Bolt</button>
           <button class="filter-btn" data-category="nut">Nut</button>
           <button class="filter-btn" data-category="washer">Washer</button>
+          <button class="filter-btn" data-category="fastener">Fastener</button>
+          <button class="filter-btn" data-category="hook">Hook</button>
           <button class="filter-btn" data-category="hinges">Hinges</button>
           <button class="filter-btn" data-category="channel">Channel</button>
           <button class="filter-btn" data-category="screw">Screw</button>
-          <button class="filter-btn" data-category="rod">Rod</button>
+          <button class="filter-btn" data-category="rod">Rod & Channel</button>
           <button class="filter-btn" data-category="fitting">Fitting</button>
           <button class="filter-btn" data-category="other">Other</button>
         </div>
@@ -220,19 +226,19 @@
           <h2 id="detailName">Nombre del Producto</h2>
           <p id="detailDesc" class="detail-desc">Descripción detallada del producto...</p>
 
-          <div class="detail-price-row">
-            <span id="detailPrice" class="price big-price">$0.00</span>
+          <!-- Price Quantity and add to cart-->
+          <!--<div class="detail-price-row">
+            <span id="detailPrice" product-grid>$0.00</span> 
           </div>
-
-          <div class="quantity-selector">
+           <div class="quantity-selector">
             <button onclick="changeQty(-1)">-</button>
             <input type="number" id="qtyInput" value="1" min="1" readonly>
             <button onclick="changeQty(1)">+</button>
           </div>
-
           <button onclick="addToCartFromModal()" class="btn btn-primary full-width">
             Agregar al Carrito <i class="fa-solid fa-cart-shopping"></i>
-          </button>
+          </button> -->
+          
         </div>
       </div>
     </div>

@@ -205,15 +205,13 @@ function createProductCard(product, isOfferSelect = false) {
             <div class="card-content">
                 <span class="card-category">${Array.isArray(product.category) ? product.category[0] : product.category}</span>
                 <h3 class="card-title">${product.name}</h3>
-                ${priceDisplay}
+                
                 ${!isOfferSelect ? `
                 <div class="card-actions">
                     <button class="btn btn-outline" style="flex: 1; justify-content: center; padding: 0.5rem;" title="Ver Detalle">
                         <i class="fa-solid fa-eye"></i>
                     </button>
-                    <button onclick="event.stopPropagation(); addToCart(${product.id})" class="btn btn-primary" style="flex: 1; justify-content: center; padding: 0.5rem;" title="Agregar al Carrito">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
+
                 </div>` : `
                 <div class="card-actions">
                     <button class="btn btn-primary" onclick="event.stopPropagation(); addToCart(${product.id})" style="flex: 1; justify-content: center; padding: 0.5rem;" title="Agregar al Carrito">
@@ -241,8 +239,8 @@ function openProductModal(id) {
   document.getElementById('detailCategory').innerText = product.category;
   document.getElementById('detailName').innerText = product.name;
   document.getElementById('detailDesc').innerText = product.description || "Sin descripción disponible.";
-  document.getElementById('detailPrice').innerText = `$${product.price.toFixed(2)}`;
-  document.getElementById('qtyInput').value = 1;
+  // document.getElementById('detailPrice').innerText = `$${product.price.toFixed(2)}`;
+  // document.getElementById('qtyInput').value = 1;
 
   document.getElementById('productModal').classList.add('active');
 }
@@ -326,8 +324,8 @@ function openProductModal(id) {
   document.getElementById('detailCategory').innerText = displayCategory;
   document.getElementById('detailName').innerText = product.name;
   document.getElementById('detailDesc').innerText = product.description || "Sin descripción disponible.";
-  document.getElementById('detailPrice').innerText = `$${product.price.toFixed(2)}`;
-  document.getElementById('qtyInput').value = 1;
+  // document.getElementById('detailPrice').innerText = `$${product.price.toFixed(2)}`;
+  // document.getElementById('qtyInput').value = 1;
 
   // Renderizar indicadores
   renderImageIndicators();
@@ -664,7 +662,7 @@ function setupEventListeners() {
       const user = document.getElementById('usernameInput').value;
       const pass = document.getElementById('passwordInput').value;
 
-      if (user === 'sofiavsh' && pass === 'pato123') {
+      if (user === 'vaibhav' && pass === 'vaibhav1607') {
         closeLogin();
         document.getElementById('adminPanelModal').classList.add('active');
         renderTodos();
