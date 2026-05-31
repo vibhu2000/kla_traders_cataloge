@@ -5,7 +5,7 @@ let state = {
   filter: 'all',
   search: '',
   currentPage: 1,
-  itemsPerPage: 6,
+  itemsPerPage: 200,
   extras: {
     giftBox: 0
   }
