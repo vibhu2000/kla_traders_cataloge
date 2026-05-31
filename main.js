@@ -682,7 +682,7 @@ function sendSuggestion() {
   const input = document.getElementById('suggestionInput').value;
   if (!input.trim()) return alert("Please write something :)");
 
-  const phoneNumber = "8920563364";
+  const phoneNumber = "+918920563364";
   const greeting = getGreeting();
   const message = `${greeting}, I am interested in:\n\n✨ ${input}\n`;
 
@@ -694,7 +694,7 @@ function sendSuggestion() {
 }
 
 function sendWhatsApp() {
-  const phoneNumber = "8920563364";
+  const phoneNumber = "+918920563364";
   const greeting = getGreeting();
   const message = `${greeting}, I am interested in:\n\n✨`;
 
