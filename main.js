@@ -680,11 +680,23 @@ function closeLogin() {
 
 function sendSuggestion() {
   const input = document.getElementById('suggestionInput').value;
-  if (!input.trim()) return alert("Por favor escribe algo :)");
+  if (!input.trim()) return alert("Please write something :)");
 
-  const phoneNumber = "584142826330";
+  const phoneNumber = "8920563364";
   const greeting = getGreeting();
-  const message = `${greeting}, estoy interesad@ en un amigurumi personalizado de:\n\n✨ ${input}\n`;
+  const message = `${greeting}, I am interested in:\n\n✨ ${input}\n`;
+
+  const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+
+  // Limpiar el input después de enviar
+  document.getElementById('suggestionInput').value = '';
+}
+
+function sendWhatsApp() {
+  const phoneNumber = "8920563364";
+  const greeting = getGreeting();
+  const message = `${greeting}, I am interested in:\n\n✨`;
 
   const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
@@ -705,9 +717,9 @@ function getGreeting() {
   if (hour >= 6 && hour < 12) {
     return "Buenos días";
   } else if (hour >= 12 && hour < 18) {
-    return "Buenas tardes";
+    return "Hi, KLA Traders";
   } else {
-    return "Buenas noches";
+    return "Hi KLA Traders";
   }
 }
 

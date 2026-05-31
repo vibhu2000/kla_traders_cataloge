@@ -1383,7 +1383,7 @@ footer {
   right: 25px;
   width: 60px;
   height: 60px;
-  background: var(--primary-dark);
+  background: green;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -1398,7 +1398,7 @@ footer {
 
 .fab-whatsapp:hover {
   transform: scale(1.1) rotate(10deg);
-  background: var(--primary);
+  background: green;
   box-shadow: 0 6px 20px rgba(255, 77, 109, 0.6);
   color: white;
 }

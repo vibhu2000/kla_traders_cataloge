@@ -142,14 +142,14 @@
 
   <!-- Section Sugerencias (Nuevo) -->
   <section class="container suggestion-section">
-    <h3 class="section-title" style="margin-bottom: 0.5rem;"><i class="fa-solid fa-lightbulb"></i> ¡Danos tus ideas!
+    <h3 class="section-title" style="margin-bottom: 0.5rem;"><i class="fa-solid fa-lightbulb"></i> Give us your ideas!
     </h3>
-    <p style="text-align: center; margin-bottom: 2rem;">¿Tienes una idea para un amigurumi? Escríbela aquí y envíamela.
+    <p style="text-align: center; margin-bottom: 2rem;">Do you have an idea? Write it down here and send it to me.
     </p>
     <div class="suggestion-box">
-      <input type="text" id="suggestionInput" placeholder="Ej: Quiero un spiderman...">
+      <input type="text" id="suggestionInput" placeholder="Any Suggestion or Query. Contact us!!!">
       <button onclick="sendSuggestion()" class="btn btn-primary">
-        Enviar <i class="fa-brands fa-whatsapp"></i>
+        Send <i class="fa-brands fa-whatsapp"></i>
       </button>
     </div>
   </section>
@@ -320,8 +320,10 @@
   </div>
 
   <!-- WhatsApp FAB -->
-  <a id="whatsappFAB" class="fab-whatsapp" target="_blank" title="Escríbenos por WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
+  <a id="whatsappFAB" class="fab-whatsapp" target="_blank" title="Message us on WhatsApp">
+    <i class="fa-brands fa-whatsapp" onclick="sendWhatsApp()">
+      
+    </i>
   </a>
 
   <!-- Scripts -->
