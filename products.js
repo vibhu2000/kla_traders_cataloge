@@ -61,20 +61,20 @@ const products = [
     },
     {
         id: 8, name: "MS Hex Nut", price: 350.00, category: ["nut"],
-        image: "fotos productos/ramo snoopy 1.jpg",
-        images: ["fotos productos/ramo snoopy 1.jpg", "fotos productos/ramo snoopy 2.jpeg",],
+        image: "fotos productos/nut1.jpg",
+        images: ["fotos productos/nut1.jpg", "fotos productos/nut2.jpg","fotos productos/nut3.jpg"],
         description: "The MS Hex Nut is a high-strength, precision-machined fastener made from durable mild steel, designed to securely fasten bolts and threaded rods in a wide range of structural and mechanical applications. Its standard hexagonal shape allows easy tightening with wrenches or spanners, making it a go-to choice for general-purpose fastening in construction, fabrication, machinery, and automotive industries. \n\n Available Size Ranges:- \n 1. All size available \n 2. Custom sizes available on request", rating: 5
     },
     {
         id: 9, name: "Double Face Hex Nut", price: 350.00, category: ["nut"],
-        image: "fotos productos/ramo snoopy 1.jpg",
-        images: ["fotos productos/ramo snoopy 1.jpg", "fotos productos/ramo snoopy 2.jpeg",],
+        image: "fotos productos/df1.jpg",
+        images: ["fotos productos/df1.jpg", "fotos productos/df2.jpg","fotos productos/df3.jpg"],
         description: "The Double Face Hex Nut is a specialized fastener designed for enhanced grip and torque application. Featuring hexagonal faces on both sides, this nut allows for easier wrench access and more secure tightening in high-load applications. Made from durable mild steel, it’s ideal for use in construction, machinery, and structural assemblies where strength and reliability are essential. \n\n Available Size Ranges:- \n 1. All size available \n 2. Custom sizes available on request", rating: 5
     },
     {
         id: 10, name: "MS Hex Flange Nut", price: 350.00, category: ["nut"],
-        image: "fotos productos/ramo snoopy 1.jpg",
-        images: ["fotos productos/ramo snoopy 1.jpg", "fotos productos/ramo snoopy 2.jpeg",],
+        image: "fotos productos/flange3.jpg",
+        images: ["fotos productos/flange1.jpg", "fotos productos/flange2.jpg","fotos productos/flange3.jpg"],
         description: "The MS Hex Flange Nut is a heavy-duty fastener made from high-quality mild steel, featuring a wide flange at the base of the hexagonal shape. This built-in washer-like flange helps distribute the clamping load over a larger surface area, reducing surface damage and increasing resistance to loosening under vibration. Available in plain or serrated flange options, it’s ideal for use in machinery, automotive, and structural applications. \n\n Available Size Ranges:- \n 1. All size available \n 2. Custom sizes available on request", rating: 5
     },
     {
@@ -121,8 +121,8 @@ const products = [
     },
     {
         id: 18, name: "SS Plain Washer", price: 350.00, category: ["washer"],
-        image: "fotos productos/ramo snoopy 1.jpg",
-        images: ["fotos productos/ramo snoopy 1.jpg", "fotos productos/ramo snoopy 2.jpeg",],
+        image: "fotos productos/ssw1.jpg",
+        images: ["fotos productos/ssw1.jpg", "fotos productos/ssw2.jpg","fotos productos/ssw3.jpg",],
         description: "Stainless Steel Washers are flat, round components designed to distribute the load of fasteners such as bolts or screws and protect surfaces from damage. Crafted from premium stainless steel (SS 202 / SS 304 / SS 316), these washers offer outstanding corrosion resistance, strength, and durability, making them ideal for demanding environments including marine, chemical, and outdoor applications. \n\n Available Size Ranges:- \n 1. All size available \n 2. Custom sizes available on request", rating: 5
     },
     {
@@ -205,8 +205,8 @@ const products = [
     },
     {
         id: 32, name: "MS Bed T Nut Bolt Bed Fitting", price: 350.00, category: ["fitting"],
-        image: "fotos productos/ramo snoopy 1.jpg",
-        images: ["fotos productos/ramo snoopy 1.jpg", "fotos productos/ramo snoopy 2.jpeg",],
+        image: "fotos productos/bed1.jpg",
+        images: ["fotos productos/bed1.jpg", "fotos productos/bed2.jpg",],
         description: "The MS Bed T Nut & Bolt Set is a specially designed bed fitting solution made from premium-grade mild steel, used for securely assembling bed frames, wooden furniture, and other structural joinery. The T-nut features prongs or flanges that grip into the wood, while the matching bolt creates a firm, reusable joint—ideal for flat-pack furniture and disassemble wooden structures. \n\n Available Size Ranges:- \n 1. All size available \n 2. Custom sizes and bulk set available on request", rating: 5
     },
     {
@@ -253,8 +253,8 @@ const products = [
     },
     {
         id: 39, name: "Self Tapping Screw", price: 350.00, category: ["screw"],
-        image: "fotos productos/ramo snoopy 1.jpg",
-        images: ["fotos productos/ramo snoopy 1.jpg", "fotos productos/ramo snoopy 2.jpeg",],
+        image: "fotos productos/screw1.jpg",
+        images: ["fotos productos/screw1.jpg", "fotos productos/screw2.jpg","fotos productos/screw3.jpg",],
         description: "Self Tapping Screws are versatile fasteners designed to create their own threads as they are driven into materials such as metal, plastic, or wood, eliminating the need for pre-tapped holes. Manufactured from high-quality hardened steel or stainless steel, these screws ensure strong, secure, and long-lasting joints in a wide range of applications. \n\n Available Size Ranges:- \n 1. All size available \n 2. Custom sizes available on request", rating: 5
     },
     {
