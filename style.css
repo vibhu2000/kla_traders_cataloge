@@ -380,7 +380,7 @@ header {
 }
 
 .card-image-container {
-  height: 250px;
+  height: 370px;
   overflow: hidden;
   position: relative;
 }
@@ -914,7 +914,7 @@ header {
 /* === SUGGESTION SECTION === */
 .suggestion-section {
   margin: 4rem auto;
-  max-width: 600px;
+  max-width: 1200px;
   text-align: center;
   padding: 2rem;
   background: white;
