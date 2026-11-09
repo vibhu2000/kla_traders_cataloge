@@ -19,26 +19,32 @@ const products = [
     // === SNOOPY ===
     {
         id: 1, name: "MS Hex Bolt", price: 350.00, category: ["bolt"],
-        image: "fotos productos/ramo snoopy 1.jpg",
-        images: ["fotos productos/ramo snoopy 1.jpg", "fotos productos/ramo snoopy 2.jpeg",],
+        image: "fotos productos/ms hex bolt-1.webp",
+        images: ["fotos productos/ms hex bolt-1.webp", "fotos productos/ms hex bolt-2.webp", "fotos productos/ms hex bolt-3.webp"],
+        description: "The MS Hex Bolt is a high-strength fastener manufactured from premium-grade mild steel, designed for robust and reliable fastening in a wide range of industrial and general-purpose applications. With a standard hexagonal head, it allows easy installation using common tools, making it ideal for use in construction, machinery, automotive, and fabrication works.\n\n Available Size Ranges:- \n 1. All size available \n 2. Custom sizes available on request", rating: 5
+    },
+    {
+        id: 60, name: "MS Hex Bolt (Polish)", price: 350.00, category: ["bolt"],
+        image: "fotos productos/ms hex bolt-2polish.webp",
+        images: ["fotos productos/ms hex bolt-1 polish.webp", "fotos productos/ms hex bolt-2polish.webp", "fotos productos/ms hex bolt-3polish.webp"],
         description: "The MS Hex Bolt is a high-strength fastener manufactured from premium-grade mild steel, designed for robust and reliable fastening in a wide range of industrial and general-purpose applications. With a standard hexagonal head, it allows easy installation using common tools, making it ideal for use in construction, machinery, automotive, and fabrication works.\n\n Available Size Ranges:- \n 1. All size available \n 2. Custom sizes available on request", rating: 5
     },
     {
         id: 2, name: "MS Half Thread Bolt", price: 350.00, category: ["bolt"],
-        image: "fotos productos/ramo snoopy 1.jpg",
-        images: ["fotos productos/ramo snoopy 1.jpg", "fotos productos/ramo snoopy 2.jpeg",],
+        image: "fotos productos/hf bolt2.webp",
+        images: ["fotos productos/hf bolt2.webp", "fotos productos/hf bolt3.webp", "fotos productos/hf bolt1.webp"],
         description: "The MS Half Thread Hex Bolt is a premium-grade fastener crafted from high-strength mild steel, designed with partial threading to provide a firm and secure grip in structural and load-bearing applications. The hexagonal head allows easy tightening using standard tools, while the unthreaded shank offers better alignment, shear strength, and clamping force—ideal for machinery, construction, and automotive uses. \n\n Available Size Ranges:- \n 1. All size available \n 2. Custom sizes available on request", rating: 5
     },
     {
         id: 3, name: "SS Hex Bolt", price: 350.00, category: ["bolt"],
-        image: "fotos productos/ramo snoopy 1.jpg",
-        images: ["fotos productos/ramo snoopy 1.jpg", "fotos productos/ramo snoopy 2.jpeg",],
+        image: "fotos productos/ss bolt 2.webp",
+        images: ["fotos productos/ss bolt 2.webp", "fotos productos/ss bolt 3.webp", "fotos productos/ss bolt 1.webp"],
         description: "Stainless Steel Hex Bolts are high-strength, six-sided head bolts made from premium stainless steel (SS 202 / SS 304 / SS 316), ideal for applications requiring corrosion resistance, durability, and a clean finish. Designed for use in both structural and decorative applications, these bolts ensure reliable fastening even in wet, humid, or chemically aggressive environments. \n\n Available Size Ranges:- \n 1. All size available \n 2. Custom sizes available on request", rating: 5
     },
     {
         id: 4, name: "MS Hex Flange Bolt", price: 350.00, category: ["bolt"],
-        image: "fotos productos/ramo snoopy 1.jpg",
-        images: ["fotos productos/ramo snoopy 1.jpg", "fotos productos/ramo snoopy 2.jpeg",],
+        image: "fotos productos/f bolt 1.webp",
+        images: ["fotos productos/f bolt 1.webp", "fotos productos/f bolt 2.webp", "fotos productos/f bolt 3.webp"],
         description: "The MS Hex Flange Bolt is a high-performance fastener made from durable mild steel, featuring an integrated flange beneath the hexagonal head. This built-in washer design distributes the load more evenly, reduces the need for a separate washer, and helps prevent loosening under vibration. Ideal for high-torque applications in automotive, machinery, and structural assemblies. \n\n Available Size Ranges:- \n 1. All size available \n 2. Custom sizes available on request", rating: 5
     },
     {
