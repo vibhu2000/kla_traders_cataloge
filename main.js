@@ -469,10 +469,19 @@ function showSearchSuggestions(query) {
     return;
   }
 
-  searchSuggestions.innerHTML = matches.map(product => `
+  /*
+    searchSuggestions.innerHTML = matches.map(product => `
     <div class="suggestion-item" onclick="selectSuggestion('${product.name}')">
       <strong>${product.name}</strong>
       <span class="suggestion-price">$${product.price.toFixed(2)}</span>
+    </div>
+  `).join('');
+  */
+ //or
+ //if you dont want price in item search baar
+  searchSuggestions.innerHTML = matches.map(product => `
+    <div class="suggestion-item" onclick="selectSuggestion('${product.name}')">
+      <strong>${product.name}</strong>
     </div>
   `).join('');
 
