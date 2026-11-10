@@ -208,7 +208,7 @@ function createProductCard(product, isOfferSelect = false) {
                 
                 ${!isOfferSelect ? `
                 <div class="card-actions">
-                    <button class="btn btn-outline" style="flex: 1; justify-content: center; padding: 0.5rem;" title="Ver Detalle">
+                    <button class="btn btn-outline" style="flex: 1; justify-content: center; padding: 0.5rem;" title="View Details">
                         <i class="fa-solid fa-eye"></i>
                     </button>
 
@@ -677,7 +677,7 @@ function setupEventListeners() {
         renderTodos();
         history.pushState({ modal: 'admin' }, '');
       } else {
-        alert("Credenciales incorrectas");
+        alert("Incorrect Credentials!!!");
       }
     });
   }
