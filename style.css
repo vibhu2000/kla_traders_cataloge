@@ -446,6 +446,7 @@ header {
   /* Reducido de 0.5rem */
   font-weight: 600;
   color: var(--text-main);
+  min-height: 3.2rem;
 }
 
 .card-price-con.detail-price-row {
